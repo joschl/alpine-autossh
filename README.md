@@ -11,9 +11,9 @@ same as for every private VPN
 
 ### Starting the container.
 * make sure, u can ssh to your host w/o providing any password (click [here](https://google.com/search?q=ssh+public+key+how+to) if that sounds uncommon to you)
-* copy ```example.env``` to ```.env```
+* copy ```example.env``` to ```.env``` and edit it
 
-Let's start it.
+Start it.
 ```
 $ make start-tunnel
 docker-compose up -d && docker cp [HOME].ssh/id_rsa `docker-compose ps -q ssh-vpn`:/payload
