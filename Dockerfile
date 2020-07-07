@@ -1,9 +1,6 @@
-FROM alpine:3.6
-MAINTAINER "Carlos Troncoso Phillips"
+FROM alpine:latest
 
-RUN    echo "@community http://dl-4.alpinelinux.org/alpine/v3.6/community/" >> /etc/apk/repositories \
-	&& apk add --update autossh@community \
-	&& rm -rf /var/lib/apt/lists/*
+RUN apk add --update autossh
 
 ENV \
 	AUTOSSH_LOGFILE=/dev/stdout \
