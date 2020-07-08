@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --update autossh
+RUN apk add --update --no-cache autossh
 
 ENV \
 	AUTOSSH_LOGFILE=/dev/stdout \
